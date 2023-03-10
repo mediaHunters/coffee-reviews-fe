@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-import { LoginInput, RegisterInput } from "../../../components/modals/components";
+// import { LoginInput, RegisterInput } from "../../../components/modals/components";
 import { IGenericResponse, IUser } from "../types";
 
 export const authApi = createApi({
@@ -9,7 +9,7 @@ export const authApi = createApi({
     baseUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/auth/`,
   }),
   endpoints: (builder) => ({
-    registerUser: builder.mutation<IGenericResponse, RegisterInput>({
+    registerUser: builder.mutation<IGenericResponse, any>({
       query(data) {
         return {
           url: "signUp",
@@ -20,7 +20,7 @@ export const authApi = createApi({
     }),
     loginUser: builder.mutation<
       { token: string, user: IUser},
-      LoginInput
+      any
     >({
       query(data) {
         return {
