@@ -4,15 +4,15 @@ import {
   MdPerson,
   MdHome,
   MdLock,
-  MdOutlineShoppingCart
+  MdOutlineShoppingCart,
+  
 } from 'react-icons/md'
-
+import { GiCoffeeCup } from 'react-icons/gi'
 // Admin Imports
 import MainDashboard from 'pages/admin/default'
 import NFTMarketplace from 'pages/admin/nft-marketplace'
 import Profile from 'pages/admin/profile'
 import DataTables from 'pages/admin/data-tables'
-import RTL from 'pages/rtl/rtl-default'
 
 // Auth Imports
 import SignInCentered from 'pages/auth/sign-in'
@@ -63,12 +63,12 @@ const routes: IRoute[] = [
     component: SignInCentered
   },
   {
-    name: 'RTL Admin',
-    layout: '/rtl',
-    path: '/rtl-default',
-    icon: <Icon as={MdHome} width='20px' height='20px' color='inherit' />,
-    component: RTL
-  }
+    name: 'Kawy',
+    layout: '/admin',
+    path: '/coffees',
+    icon: <Icon as={GiCoffeeCup} width='20px' height='20px' color='inherit' />,
+    component: SignInCentered
+  },
 ]
 
 export default routes
